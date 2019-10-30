@@ -1,0 +1,8 @@
+body {
+  background: #ffffff;
+}
+
+div.photopile-wrapper {
+  margin: 175px auto;
+  width: 750px;
+}
