@@ -15,6 +15,9 @@ class CreateAnalysesTable extends Migration
     {
         Schema::create('analyses', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer("student_id");
+            $table->integer("paper_id");
+            $table->dateTime("time");
             $table->timestamps();
         });
     }
