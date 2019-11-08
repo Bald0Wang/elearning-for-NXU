@@ -15,6 +15,8 @@ class CreateSubjectTypesTable extends Migration
     {
         Schema::create('subject_types', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('subtype')->nullable();
+            $table->string('anstype')->nullable();
             $table->timestamps();
         });
     }

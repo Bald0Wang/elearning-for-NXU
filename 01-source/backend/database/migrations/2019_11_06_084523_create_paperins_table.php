@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAnalysesTable extends Migration
+class CreatePaperinsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateAnalysesTable extends Migration
      */
     public function up()
     {
-        Schema::create('analyses', function (Blueprint $table) {
+        Schema::create('paperins', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer("student_id")->nullable();
-            $table->integer("paper_id")->nullable();
-            $table->dateTime("time")->nullable();
+            $table->integer("paper_id");
+            $table->integer("subject_id");
+            $table->dateTime("subjectype_id");
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateAnalysesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('analyses');
+        Schema::dropIfExists('paperins');
     }
 }

@@ -15,6 +15,8 @@ class CreateStudentCollectionMnsTable extends Migration
     {
         Schema::create('student_collection_mns', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('student_id')->nullable();
+            $table->string('collection_id')->nullable();
             $table->timestamps();
         });
     }

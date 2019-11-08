@@ -15,6 +15,8 @@ class CreateStudentPaperMnsTable extends Migration
     {
         Schema::create('student_paper_mns', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('student_id')->nullable();
+            $table->string('paper_id')->nullable();
             $table->timestamps();
         });
     }

@@ -19,7 +19,10 @@ class CreatePapersTable extends Migration
             $table->string('usingfor')->comment('适用考生')->nullable();
             $table->string('hardtype')->nullable();
             $table->string('subjectype_id')->nullable();
-            $table->integer('sum')->nullable();
+            $table->integer('sum0')->nullable();
+            $table->integer('sum1')->nullable();
+            $table->integer('sum2')->nullable();
+            $table->integer('scorealgorithm')->nullable();
             // $table->dateTime('detected_at');
             $table->timestamps();
         });

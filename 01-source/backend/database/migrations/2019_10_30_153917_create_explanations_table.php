@@ -15,6 +15,8 @@ class CreateExplanationsTable extends Migration
     {
         Schema::create('explanations', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('subject_id')->nullable();
+            $table->string('explan')->nullable();
             $table->timestamps();
         });
     }

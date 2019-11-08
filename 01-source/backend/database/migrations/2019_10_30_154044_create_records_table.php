@@ -15,10 +15,10 @@ class CreateRecordsTable extends Migration
     {
         Schema::create('records', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer("student_id");
-            $table->integer("record_type");
-            $table->integer("index");
-            $table->integer("correct");
+            $table->integer("student_id")->nullable();
+            $table->integer("record_type")->nullable();
+            $table->integer("index")->nullable();
+            $table->integer("correct")->nullable();
             $table->timestamps();
         });
     }

@@ -15,6 +15,7 @@ class CreateCollationsTable extends Migration
     {
         Schema::create('collations', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('subjectype_id')->nullable();
             $table->timestamps();
         });
     }
