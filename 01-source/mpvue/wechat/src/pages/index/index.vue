@@ -4,9 +4,11 @@
     <div class="userinfo" @click="bindViewTap">
       <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover" />
       <img class="userinfo-avatar" src="/static/images/user.png" background-size="cover" />
-
+      
       <div class="userinfo-nickname">
-        <card :text="userInfo.nickName"></card>
+        <card :text="userInfo.nickName">
+          
+        </card>
       </div>
     </div>
 
@@ -21,9 +23,10 @@
       <input type="text" class="form-control" v-model="motto" placeholder="v-model" />
       <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
     </form>
-
-    <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
-
+    <p>test</p>
+    
+    <i-button @click="bindViewTap()"  type="primary">去往Vuex示例页面</i-button>
+    <!-- <i-button bind:click="handleClick" type="error" long="true">联通两边按钮</i-button> -->
     <div class="all">
         <div class="left">
         </div>
@@ -63,7 +66,11 @@ export default {
     clickHandle (ev) {
       console.log('clickHandle:', ev)
       // throw {message: 'custom test'}
-    }
+    },
+    getData () {
+          const url = '../counter/main'
+          wx.navigateTo({ url })
+      }
   },
 
   created () {

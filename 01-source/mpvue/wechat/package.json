@@ -24,6 +24,7 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "iview-weapp": "^2.0.0",
     "mpvue": "^2.0.0",
     "vuex": "^3.0.1"
   },
