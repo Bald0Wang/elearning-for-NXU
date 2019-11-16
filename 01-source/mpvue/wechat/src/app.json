@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/main",
     "pages/logs/main",
+    "pages/user/main",
     "pages/counter/main"
   ],
   "window": {
@@ -26,6 +27,11 @@
       "pagePath": "pages/logs/main",
       "iconPath": "static/tabs/orders.png",
       "selectedIconPath": "static/tabs/orders-active.png"
+    }, {
+      "text": "个人",
+      "pagePath": "pages/user/main",
+      "iconPath": "static/tabs/orders.png",
+      "selectedIconPath": "static/tabs/orders-active.png"
     }],
 
     "items": [{
@@ -36,6 +42,11 @@
     }, {
       "name": "订单",
       "pagePath": "pages/logs/main",
+      "icon": "static/tabs/orders.png",
+      "activeIcon": "static/tabs/orders-active.png"
+    },{
+      "name": "个人",
+      "pagePath": "pages/user/main",
       "icon": "static/tabs/orders.png",
       "activeIcon": "static/tabs/orders-active.png"
     }],

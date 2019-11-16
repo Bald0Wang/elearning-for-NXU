@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 //需要token验证的接口
-Route::group(['prefix'=>'v1','middleware'=>'jwt.auth'],function(){
+Route::group(['prefix'=>'v1',],function(){
     /*
     |-------------------------------------------------------------------------------
     | 测试接口组

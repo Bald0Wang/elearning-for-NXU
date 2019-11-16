@@ -13,14 +13,10 @@ class TestsController extends Controller
      */
     public function tests()
     {
-        $user = auth('api')->user();
-        if($user!=""){//判断用户是否有访问接口的权限
-            $users = User::all();
+        if(1){//判断用户是否有访问接口的权限
             return response()->json([
                 'status' => 'success',
                 'status_code' => 200,
-                'users' => $users,
-                'user' => $user
             ]); 
         }else{
             return \Response::json([
