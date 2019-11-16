@@ -7,14 +7,14 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable implements JWTSubject
 {
-    use Notifiable;
+    use Notifiable;  //提供给用户发送通知的方法
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = [
+    protected $fillable = [   //白名单注册方法
         'name', 'email', 'password',
     ];
 
@@ -23,7 +23,7 @@ class User extends Authenticatable implements JWTSubject
      *
      * @var array
      */
-    protected $hidden = [
+    protected $hidden = [    //脱敏处理
         'password', 'remember_token',
     ];
 

@@ -1,6 +1,6 @@
 <template>
 <div>
-  <i-button @click="gopage()" type="primary">去往Vuex示例页面</i-button>
+  <i-button @click="gopage()" type="primary">primary</i-button>
   <swiper v-if="imgUrls.length > 0" indidator-dots="imgUrls.length > 1">
     <block v-for="(item, index) in imgUrls" :key="index">
       <swiper-item>
