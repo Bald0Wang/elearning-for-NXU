@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Record;
 use Illuminate\Http\Request;
 
-class RecordComposeController extends Controller
+class RecordController extends Controller
 {
     public function findRecord(Request $request){
         if($request->isMethod('GET')){
