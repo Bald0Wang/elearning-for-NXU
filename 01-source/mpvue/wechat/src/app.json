@@ -3,6 +3,7 @@
     "pages/index/main",
     "pages/logs/main",
     "pages/user/main",
+    "pages/login/main",
     "pages/counter/main"
   ],
   "window": {
@@ -32,6 +33,11 @@
       "pagePath": "pages/user/main",
       "iconPath": "static/tabs/orders.png",
       "selectedIconPath": "static/tabs/orders-active.png"
+    }, {
+      "text": "login",
+      "pagePath": "pages/login/main",
+      "iconPath": "static/tabs/orders.png",
+      "selectedIconPath": "static/tabs/orders-active.png"
     }],
 
     "items": [{
@@ -47,6 +53,11 @@
     },{
       "name": "个人",
       "pagePath": "pages/user/main",
+      "icon": "static/tabs/orders.png",
+      "activeIcon": "static/tabs/orders-active.png"
+    },{
+      "name": "login",
+      "pagePath": "pages/login/main",
       "icon": "static/tabs/orders.png",
       "activeIcon": "static/tabs/orders-active.png"
     }],
