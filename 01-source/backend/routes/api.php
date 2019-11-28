@@ -36,6 +36,99 @@ Route::group(['prefix'=>'v1',],function(){
         */
         Route::get('/','TestsController@tests');
     });
+
+    Route::prefix('scores')->group(function () {
+        /*
+        |-------------------------------------------------------------------------------
+        | 获取测试信息
+        |-------------------------------------------------------------------------------
+        | URL:            /api/v1/scores
+        | Controller:     ScoreController
+        | Method:         GET
+        | Description:    获取测试信息
+        */
+        Route::get('/','ScoreController@findScore');
+    });
+
+    Route::prefix('scores')->group(function () {
+        /*
+        |-------------------------------------------------------------------------------
+        | 获取测试信息
+        |-------------------------------------------------------------------------------
+        | URL:            /api/v1/scores/{student_id}
+        | Controller:     ScoreController
+        | Method:         GET
+        | Description:    获取测试信息
+        */
+        Route::get('/{stuId}','ScoreController@findScoreBySId');
+    });
+
+    Route::prefix('scores')->group(function () {
+        /*
+        |-------------------------------------------------------------------------------
+        | 获取测试信息
+        |-------------------------------------------------------------------------------
+        | URL:            /api/v1/scores/{student_id}/{paper_id}/{score}
+        | Controller:     ScoreController
+        | Method:         POST
+        | Description:    获取测试信息
+        */
+        Route::get('/{stuId}/{papId}/{Score}','ScoreController@addScore');
+    });
+
+    Route::prefix('analyses')->group(function () {
+        /*
+        |-------------------------------------------------------------------------------
+        | 获取测试信息
+        |-------------------------------------------------------------------------------
+        | URL:            /api/v1/analyses
+        | Controller:     AnalyseController
+        | Method:         GET
+        | Description:    获取测试信息
+        */
+        Route::get('/','AnalyseController@findAnalyse');
+    });
+
+    Route::prefix('analyses')->group(function () {
+        /*
+        |-------------------------------------------------------------------------------
+        | 获取测试信息
+        |-------------------------------------------------------------------------------
+        | URL:            /api/v1/analyses/{student_id}
+        | Controller:     AnalyseController
+        | Method:         GET
+        | Description:    获取测试信息
+        */
+        Route::get('/{stuId}','AnalyseController@findAnalyseBySId');
+    });
+
+    Route::prefix('records')->group(function () {
+        /*
+        |-------------------------------------------------------------------------------
+        | 获取测试信息
+        |-------------------------------------------------------------------------------
+        | URL:            /api/v1/records
+        | Controller:     RecordController
+        | Method:         GET
+        | Description:    获取测试信息
+        */
+        Route::get('/','RecordController@findRecord');
+    });
+
+    Route::prefix('records')->group(function () {
+        /*
+        |-------------------------------------------------------------------------------
+        | 获取测试信息
+        |-------------------------------------------------------------------------------
+        | URL:            /api/v1/records/{student_id}
+        | Controller:     RecordController
+        | Method:         GET
+        | Description:    获取测试信息
+        */
+        Route::get('/{stuId}','RecordController@findRecordBySId');
+    });
+
+
 });
 
 Route::group([
