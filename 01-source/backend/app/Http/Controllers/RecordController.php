@@ -38,8 +38,12 @@ class RecordController extends Controller
         }
     }
 
-    public function addRecord(Request $request,$stuId,$recType,$Index,$Correct){
+    public function addRecord(Request $request){
         if($request->isMethod('POST')){
+            $stuId=$request->input('stuId');
+            $recType=$request->input('recType');
+            $Index=$request->input('Index');
+            $Correct=$request->input('Correct');
             $record = new Record;
             $record->student_id = $stuId;
             $record->record_type = $recType;
@@ -60,21 +64,21 @@ class RecordController extends Controller
         }
     }
 
-    public function deleteRecord(Request $request,$stuId){
-        if($request->isMethod('POST')){
-            $record = Record::where('student_id',$stuId);
-            if($record->delete()){
-                return response()->json([
-                    'status' => 'success',
-                    'status_code' => 200,
-                ]); 
-            }
-        }else{
-            return response()->json([
-                'status' => 'error',
-                'status_code' => 404,
-            ]); 
-        }
-    }
+    // public function deleteRecord($stuId){
+    //     if($request->isMethod('POST')){
+    //         $record = Record::where('student_id',$stuId);
+    //         if($record->delete()){
+    //             return response()->json([
+    //                 'status' => 'success',
+    //                 'status_code' => 200,
+    //             ]); 
+    //         }
+    //     }else{
+    //         return response()->json([
+    //             'status' => 'error',
+    //             'status_code' => 404,
+    //         ]); 
+    //     }
+    // }
     
 }

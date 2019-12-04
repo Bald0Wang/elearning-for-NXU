@@ -125,33 +125,40 @@ Route::group(['prefix'=>'v1',],function(){
         | Description:    获取测试信息
         */
         Route::get('/','ScoreController@findScore');
-    });
-
-    Route::prefix('scores')->group(function () {
         /*
         |-------------------------------------------------------------------------------
         | 获取测试信息
         |-------------------------------------------------------------------------------
-        | URL:            /api/v1/scores/{student_id}
+        | URL:            /api/v1/scores/{stuId}/{papId}
         | Controller:     ScoreController
         | Method:         GET
         | Description:    获取测试信息
         */
-        Route::get('/{stuId}','ScoreController@findScoreBySId');
-    });
-
-    Route::prefix('scores')->group(function () {
+        Route::get('/{stuId}/{papId}','ScoreController@findScoreBySId');
         /*
         |-------------------------------------------------------------------------------
         | 获取测试信息
         |-------------------------------------------------------------------------------
-        | URL:            /api/v1/scores/{student_id}/{paper_id}/{score}
+        | URL:            /api/v1/scores/add
+        | Param:          {stuId},{papId},{Score}
         | Controller:     ScoreController
         | Method:         POST
         | Description:    获取测试信息
         */
-        Route::get('/{stuId}/{papId}/{Score}','ScoreController@addScore');
+        Route::post('/add','ScoreController@addScore');
+        /*
+        |-------------------------------------------------------------------------------
+        | 获取测试信息
+        |-------------------------------------------------------------------------------
+        | URL:            /api/v1/scores/update
+        | Param:          {stuId},{papId},{Score}
+        | Controller:     ScoreController
+        | Method:         POST
+        | Description:    获取测试信息
+        */
+        Route::post('/update','ScoreController@updateScore');
     });
+
 
     Route::prefix('analyses')->group(function () {
         /*
@@ -164,9 +171,6 @@ Route::group(['prefix'=>'v1',],function(){
         | Description:    获取测试信息
         */
         Route::get('/','AnalyseController@findAnalyse');
-    });
-
-    Route::prefix('analyses')->group(function () {
         /*
         |-------------------------------------------------------------------------------
         | 获取测试信息
@@ -179,6 +183,7 @@ Route::group(['prefix'=>'v1',],function(){
         Route::get('/{stuId}','AnalyseController@findAnalyseBySId');
     });
 
+
     Route::prefix('records')->group(function () {
         /*
         |-------------------------------------------------------------------------------
@@ -190,9 +195,6 @@ Route::group(['prefix'=>'v1',],function(){
         | Description:    获取测试信息
         */
         Route::get('/','RecordController@findRecord');
-    });
-
-    Route::prefix('records')->group(function () {
         /*
         |-------------------------------------------------------------------------------
         | 获取测试信息
@@ -203,7 +205,19 @@ Route::group(['prefix'=>'v1',],function(){
         | Description:    获取测试信息
         */
         Route::get('/{stuId}','RecordController@findRecordBySId');
+        /*
+        |-------------------------------------------------------------------------------
+        | 获取测试信息
+        |-------------------------------------------------------------------------------
+        | URL:            /api/v1/records/add
+        | Param:          {stuId},{recType},{Index},{Correct}
+        | Controller:     RecordController
+        | Method:         POST
+        | Description:    获取测试信息
+        */
+        Route::post('/add','RecordController@addRecord');
     });
+
 
 
 });

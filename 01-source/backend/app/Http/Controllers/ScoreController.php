@@ -10,7 +10,7 @@ class ScoreController extends Controller
         if($request->isMethod('GET')){
             $scores=Score::all();
             return response()->json([
-                'scores' =>$score ,
+                'scores' =>$scores ,
                 'status' => 'success',
                 'status_code' => 200,
             ]); 
@@ -37,8 +37,11 @@ class ScoreController extends Controller
         }
     }
 
-    public function addScore(Request $request,$stuId,$papId,$Score){
+    public function addScore(Request $request){
         if($request->isMethod('POST')){
+            $stuId=$request->input('stuId');
+            $papId=$request->input('papId');
+            $Score=$request->input('Score');
             $score = new Score;
             $score->student_id = $stuId;
             $score->paper_id = $papId;
@@ -58,10 +61,14 @@ class ScoreController extends Controller
         }
     }
     
-    public function updateScore(Request $request,$stuId,$papId,$Score){
+    public function updateScore(Request $request){
         if($request->isMethod('POST')){
-            $score = Score::where('student_id',$stuId)->where('paper_id',$papId);
-            $score->score = $score;
+            $stuId=$request->input('stuId');
+            $papId=$request->input('papId');
+            $Score=$request->input('Score');
+            $score=new Score;
+            $score = Score::where('student_id',$stuId)->where('paper_id',$papId)->get();
+            $score->score = $Score;
             if($score->save()){
                 return response()->json([
                     'score' =>$score ,
