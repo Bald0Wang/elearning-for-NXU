@@ -100,6 +100,8 @@ class PaperController extends Controller
         foreach (array_keys(array_except($this->fields, ['tag'])) as $field) {
             $tag->$field = $request->get($field);
         }
+
+        
         $tag->save();
         // 改
         return redirect("/admin/paper/$id/edit")
