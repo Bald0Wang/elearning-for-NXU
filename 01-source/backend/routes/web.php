@@ -27,6 +27,25 @@ Route::middleware('web')->namespace('Admin')->group(function(){
         | Description:    试卷信息后台部分
         */
     Route::resource('admin/paper','PaperController');
+         /*
+        |-------------------------------------------------------------------------------
+        | 试卷信息后台部分
+        |-------------------------------------------------------------------------------
+        | URL:            http://localhost:8000/admin/student
+        | Controller:     StudentController
+        | Modle:          Student
+        | Description:    试卷信息后台部分
+        */
+    Route::resource('admin/students','StudentController');     /*
+        |-------------------------------------------------------------------------------
+        | 试卷信息后台部分
+        |-------------------------------------------------------------------------------
+        | URL:            http://localhost:8000/admin/collection
+        | Controller:     CollectionController
+        | Modle:          Collection
+        | Description:    试卷信息后台部分
+        */
+    Route::resource('admin/collections','CollectionController');
     
 });
 

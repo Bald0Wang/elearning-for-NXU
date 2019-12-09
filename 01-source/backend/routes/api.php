@@ -217,7 +217,54 @@ Route::group(['prefix'=>'v1',],function(){
         */
         Route::post('/add','RecordController@addRecord');
     });
-
+    Route::prefix('collections')->group(function(){
+        /*
+        |-------------------------------------------------------------------------------
+        | 收藏相关接口
+        |-------------------------------------------------------------------------------
+        | URL:            /api/v1/collections
+        | Controller:     
+        | Method:         GET
+        | Description:    获取收藏信息
+        */
+        Route::get('/{id}','CollectionController@collectionindex');
+    });
+    Route::prefix('students')->group(function(){
+        /*
+        |-------------------------------------------------------------------------------
+        | 学生信息相关接口
+        |-------------------------------------------------------------------------------
+        | URL:            /api/v1/students
+        | Controller:     
+        | Method:         GET
+        | Description:    获取学生信息
+        */
+        Route::get('/{id}','StudentController@studentindex');
+    });
+    Route::prefix('student_paper_mns')->group(function(){
+        /*
+        |-------------------------------------------------------------------------------
+        | 收藏相关接口
+        |-------------------------------------------------------------------------------
+        | URL:            /api/v1/collections
+        | Controller:     
+        | Method:         GET
+        | Description:    获取收藏信息
+        */
+        Route::get('/{id}','Student_paper_mnController@student_paper_mn_index');
+    });
+    Route::prefix('student_collections_mns')->group(function(){
+        /*
+        |-------------------------------------------------------------------------------
+        | 收藏相关接口
+        |-------------------------------------------------------------------------------
+        | URL:            /api/v1/collections
+        | Controller:     
+        | Method:         GET
+        | Description:    获取收藏信息
+        */
+        Route::get('/{id}','Student_collections_mnController@student_collections_mn_index');
+    });
 
 
 });

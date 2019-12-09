@@ -1,16 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Models;
 
-use Illuminate\Http\Request;
-use App\Models\User;
-use App\Models\Subject;
-use App\Models\Student;
-use Auth;
+use Illuminate\Database\Eloquent\Model;
 
-class Student_Paper_mn_Controller extends Controller
+class Student_paper_mn extends Model
 {
-    public function Student_Paper_mn_index(Request $request,$id){
-        
-    }
+    protected $table='student_paper_mns';
+    protected $filltable=['subjectype_id','created_at','updated_at'];
 }
