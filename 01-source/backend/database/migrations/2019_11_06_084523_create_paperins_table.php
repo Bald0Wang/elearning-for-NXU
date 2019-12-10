@@ -17,7 +17,7 @@ class CreatePaperinsTable extends Migration
             $table->increments('id');
             $table->integer("paper_id");
             $table->integer("subject_id");
-            $table->dateTime("subjectype_id");
+            $table->integer("subjectype_id");
             $table->timestamps();
         });
     }
