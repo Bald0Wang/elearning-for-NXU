@@ -48,7 +48,7 @@
                             </td> -->
                             <td>
                             <!-- 改 -->
-                                <a href="/admin/paper/{{ $tag->id }}/edit" class="btn btn-xs btn-info">
+                                <a href="/admin/paperin/{{ $tag->id }}/edit" class="btn btn-xs btn-info">
                                     <i class="fa fa-edit"></i> 编辑
                                 </a>
                             </td>

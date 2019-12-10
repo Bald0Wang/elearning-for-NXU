@@ -46,6 +46,17 @@ Route::middleware('web')->namespace('Admin')->group(function(){
         | Description:    试卷信息后台部分
         */
     Route::resource('admin/collections','CollectionController');
+        /*
+    |-------------------------------------------------------------------------------
+    | 试卷信息后台部分
+    |-------------------------------------------------------------------------------
+    | URL:            http://localhost:8000/admin/paperin
+    | Controller:     PaperinController
+    | Modle:          Paperin
+    | Description:    试卷信息后台部分
+    */
+    Route::resource('admin/paperin','PaperinController');
+
     
 });
 
