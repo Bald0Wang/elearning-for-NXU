@@ -9,7 +9,10 @@
     "pages/exam/main",
     "pages/chapter/main",
     "pages/test/main",
-    "pages/select/main" 
+    "pages/select/main",
+    "pages/recommend/main",
+    "pages/upload/main",
+    "pages/analyse/main" 
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -66,8 +69,26 @@
       "text": "选择",
       "pagePath": "pages/select/main",
       "iconPath": "static/tabs/orders.png",
+      "selectedIconPath": "static/tabs/orders-active.png",
+    },{
+      "text": "推荐",
+      "pagePath": "pages/recommend/main",
+      "iconPath": "static/tabs/orders.png",
       "selectedIconPath": "static/tabs/orders-active.png"
-    }],
+    },
+    {
+      "text": "上传",
+      "pagePath": "pages/upload/main",
+      "iconPath": "static/tabs/orders.png",
+      "selectedIconPath": "static/tabs/orders-active.png"
+    },
+    {
+      "text": "成绩分析",
+      "pagePath": "pages/analyse/main",
+      "iconPath": "static/tabs/orders.png",
+      "selectedIconPath": "static/tabs/orders-active.png"
+    }
+  ],
 
     "items": [{
       "name": "首页",
@@ -113,7 +134,25 @@
       "pagePath": "pages/select/main",
       "icon": "static/tabs/orders.png",
       "activeIcon": "static/tabs/orders-active.png"
-    }],
+    }, {
+      "name": "推荐",
+      "pagePath": "pages/recommend/main",
+      "icon": "static/tabs/orders.png",
+      "activeIcon": "static/tabs/orders-active.png"
+    },
+    {
+      "name": "上传",
+      "pagePath": "pages/upload/main",
+      "icon": "static/tabs/orders.png",
+      "activeIcon": "static/tabs/orders-active.png"
+    },
+    {
+      "name": "成绩分析",
+      "pagePath": "pages/analyse/main",
+      "icon": "static/tabs/orders.png",
+      "activeIcon": "static/tabs/orders-active.png"
+    }
+  ],
     "position": "bottom"
   }
 }
