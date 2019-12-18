@@ -1,0 +1,12 @@
+{
+    "navigationBarTitleText": "章节练习",
+    "usingComponents": {
+      "i-cell": "../../../static/iview/cell/index",
+      "i-panel": "../../../static/iview/panel/index",
+      "i-icon": "../../../static/iview/icon/index",
+      "i-cell-group": "../../../static/iview/cell-group/index",
+      "i-switch": "../../../static/iview/switch/index",
+      "i-rate": "../../../static/iview/rate/index"
+    }
+  }
+  

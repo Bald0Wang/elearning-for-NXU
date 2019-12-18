@@ -1,0 +1,15 @@
+{
+    "navigationBarTitleText": "参加的考试",
+    "usingComponents": {
+     
+    "i-cell-group": "../../../static/iview/cell-group/index",
+    "i-cell": "../../../static/iview/cell/index",
+    "i-panel": "../../../static/iview/panel/index",
+    "i-icon": "../../../static/iview/icon/index",
+    "i-switch": "../../../static/iview/switch/index",
+    "i-button": "../../../static/iview/button/index",
+    "i-radio-group": "../../../static/iview/radio-group/index",
+    "i-radio": "../../../static/iview/radio/index"
+    }
+  }
+  
