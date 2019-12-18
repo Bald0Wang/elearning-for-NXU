@@ -4,7 +4,12 @@
     "pages/logs/main",
     "pages/user/main",
     "pages/login/main",
-    "pages/counter/main"
+    "pages/counter/main",
+    "pages/select1/main",
+    "pages/exam/main",
+    "pages/chapter/main",
+    "pages/test/main",
+    "pages/select/main" 
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -37,6 +42,30 @@
       "text": "login",
       "pagePath": "pages/login/main",
       "iconPath": "static/tabs/orders.png",
+      "selectedIconPath": "static/tabs/orders-active.png",
+      "text": "选择1",
+      "pagePath": "pages/select1/main",
+      "iconPath": "static/tabs/home.png",
+      "selectedIconPath": "static/tabs/home-active.png"
+    }, {
+      "text": "真题模考",
+      "pagePath": "pages/exam/main",
+      "iconPath": "static/tabs/orders.png",
+      "selectedIconPath": "static/tabs/orders-active.png"
+    }, {
+      "text": "章节练习",
+      "pagePath": "pages/chapter/main",
+      "iconPath": "static/tabs/orders.png",
+      "selectedIconPath": "static/tabs/orders-active.png"
+    },{
+      "text": "考试",
+      "pagePath": "pages/test/main",
+      "iconPath": "static/tabs/orders.png",
+      "selectedIconPath": "static/tabs/orders-active.png"
+    },{
+      "text": "选择",
+      "pagePath": "pages/select/main",
+      "iconPath": "static/tabs/orders.png",
       "selectedIconPath": "static/tabs/orders-active.png"
     }],
 
@@ -58,6 +87,30 @@
     },{
       "name": "login",
       "pagePath": "pages/login/main",
+      "icon": "static/tabs/orders.png",
+      "activeIcon": "static/tabs/orders-active.png",
+      "name": "选择1",
+      "pagePath": "pages/select1/main",
+      "icon": "static/tabs/home.png",
+      "activeIcon": "static/tabs/home-active.png"
+    }, {
+      "name": "真题模考",
+      "pagePath": "pages/exam/main",
+      "icon": "static/tabs/orders.png",
+      "activeIcon": "static/tabs/orders-active.png"
+    },{
+      "name": "章节练习",
+      "pagePath": "pages/chapter/main",
+      "icon": "static/tabs/orders.png",
+      "activeIcon": "static/tabs/orders-active.png"
+    },{
+      "name": "考试",
+      "pagePath": "pages/test/main",
+      "icon": "static/tabs/orders.png",
+      "activeIcon": "static/tabs/orders-active.png"
+    },{
+      "name": "选择",
+      "pagePath": "pages/select/main",
       "icon": "static/tabs/orders.png",
       "activeIcon": "static/tabs/orders-active.png"
     }],
