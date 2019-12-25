@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Paper;
+use App\Models\Paperin;
 use App\Models\Subject;
 use App\Models\SubjectType;
 use Illuminate\Http\Request;
@@ -40,8 +41,38 @@ class PaperController extends Controller
             ]); 
         }
     }
+    public function papersubjects(Request $request){
+        if($request->isMethod('GET')){
+            $paperid=$request->input('paperid');
+            $allofpaper=Paperin::where('paper_id',$paperid)->get();
+            $subid=array();
+            for($i=0;$i<sizeof($allofpaper);$i++){
+                array_push($subid,$allofpaper[$i]->subject_id);
+            }
+            $subjects=Subject::all();
+            $subs=array();
+            for($i=0;$i<sizeof($subjects);$i++){
+                if(in_array($subjects[$i]->id,$subid)){
+                    array_push($subs,$subjects[$i]);
+                }
+            }
+            return response()->json([
+                // 'allofpaper' => $allofpaper,
+                'subid'=>$subs,
+                'status' => 'success',
+                'status_code' => 200,
+            ]); 
+        }else{
+            return response()->json([
+                'status' => 'error',
+                'status_code' => 404,
+            ]); 
+        }
+    }
 }
 
+
+    
 // public function paperindex(Request $request){
     //     if($request->isMethod('POST')){
     //         $imsi=$request->input('imsi');

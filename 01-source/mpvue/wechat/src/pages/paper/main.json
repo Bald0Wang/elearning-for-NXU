@@ -1,0 +1,15 @@
+{
+    "navigationBarTitleText": "考研政治",
+    "usingComponents": {
+      
+      "i-cell": "../../../static/iview/cell/index",
+      "i-panel": "../../../static/iview/panel/index",
+      "i-icon": "../../../static/iview/icon/index",
+      "i-cell-group": "../../../static/iview/cell-group/index",
+      "i-switch": "../../../static/iview/switch/index",
+      "i-checkbox-group": "../../../static/iview/checkbox-group/index",
+      "i-checkbox": "../../../static/iview/checkbox/index",
+      "i-button": "../../../static/iview/button/index"
+    }
+  }
+  

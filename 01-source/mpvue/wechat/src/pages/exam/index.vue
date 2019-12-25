@@ -1,51 +1,50 @@
 <template>
 <div>
-<i-panel class="cell-panel-demo">
-<i-cell-group>
-    <i-cell title="2019年全国硕士研究生入学统一考试思想政治理论试题"  url="/pages/select1/index">
-     <i-icon type="brush" color="#57ceab" size="30" slot="icon" />
-    </i-cell>
+  <i-panel class="cell-panel-demo">
+    <i-cell-group>
+      <i-cell title="2019年全国硕士研究生入学统一考试思想政治理论试题" url="/pages/select1/index">
+        <i-icon type="brush" color="#57ceab" size="30" slot="icon" />
+      </i-cell>
 
-    <i-cell title="2018年全国硕士研究生入学统一考试思想政治理论试题"  url="/pages/happy/index">
-     <i-icon type="brush" color="#57ceab" size="30" slot="icon" />
-    </i-cell>
+      <i-cell title="2018年全国硕士研究生入学统一考试思想政治理论试题" url="/pages/happy/index">
+        <i-icon type="brush" color="#57ceab" size="30" slot="icon" />
+      </i-cell>
 
-    <i-cell title="2017年全国硕士研究生入学统一考试思想政治理论试题"  url="/pages/happy/index">
-     <i-icon type="brush" color="#57ceab" size="30" slot="icon" />
-    </i-cell>
+      <i-cell title="2017年全国硕士研究生入学统一考试思想政治理论试题" @click="gettype(1)" is-link url="/pages/paper/main">
+        <i-icon type="brush" color="#57ceab" size="30" slot="icon" />
+      </i-cell>
 
-    <i-cell title="2016年全国硕士研究生入学统一考试思想政治理论试题"  url="/pages/happy/index">
-     <i-icon type="brush" color="#57ceab" size="30" slot="icon" />
-    </i-cell>
+      <i-cell title="2016年全国硕士研究生入学统一考试思想政治理论试题" url="/pages/happy/index">
+        <i-icon type="brush" color="#57ceab" size="30" slot="icon" />
+      </i-cell>
 
-    <i-cell title="2015年全国硕士研究生入学统一考试思想政治理论试题"  url="/pages/happy/index">
-     <i-icon type="brush" color="#57ceab" size="30" slot="icon" />
-    </i-cell>
+      <i-cell title="2015年全国硕士研究生入学统一考试思想政治理论试题" url="/pages/happy/index">
+        <i-icon type="brush" color="#57ceab" size="30" slot="icon" />
+      </i-cell>
 
-     <i-cell title="2014年全国硕士研究生入学统一考试思想政治理论试题"  url="/pages/happy/index">
-     <i-icon type="brush" color="#57ceab" size="30" slot="icon" />
-    </i-cell>
+      <i-cell title="2014年全国硕士研究生入学统一考试思想政治理论试题" url="/pages/happy/index">
+        <i-icon type="brush" color="#57ceab" size="30" slot="icon" />
+      </i-cell>
 
-     <i-cell title="2013年全国硕士研究生入学统一考试思想政治理论试题"  url="/pages/happy/index">
-     <i-icon type="brush" color="#57ceab" size="30" slot="icon" />
-    </i-cell>
+      <i-cell title="2013年全国硕士研究生入学统一考试思想政治理论试题" url="/pages/happy/index">
+        <i-icon type="brush" color="#57ceab" size="30" slot="icon" />
+      </i-cell>
 
-     <i-cell title="2012年全国硕士研究生入学统一考试思想政治理论试题"  url="/pages/happy/index">
-     <i-icon type="brush" color="#57ceab" size="30" slot="icon" />
-    </i-cell>
+      <i-cell title="2012年全国硕士研究生入学统一考试思想政治理论试题" url="/pages/happy/index">
+        <i-icon type="brush" color="#57ceab" size="30" slot="icon" />
+      </i-cell>
 
-     <i-cell title="2011年全国硕士研究生入学统一考试思想政治理论试题"  url="/pages/happy/index">
-     <i-icon type="brush" color="#57ceab" size="30" slot="icon" />
-    </i-cell>
+      <i-cell title="2011年全国硕士研究生入学统一考试思想政治理论试题" url="/pages/happy/index">
+        <i-icon type="brush" color="#57ceab" size="30" slot="icon" />
+      </i-cell>
 
-     <i-cell title="2010年全国硕士研究生入学统一考试思想政治理论试题"  url="/pages/happy/index">
-     <i-icon type="brush" color="#57ceab" size="30" slot="icon" />
-    </i-cell>
-  </i-cell-group>
+      <i-cell title="2010年全国硕士研究生入学统一考试思想政治理论试题" url="/pages/happy/index">
+        <i-icon type="brush" color="#57ceab" size="30" slot="icon" />
+      </i-cell>
+    </i-cell-group>
   </i-panel>
-</div>
-    
 
+</div>
 </template>
 
 <script>
@@ -61,13 +60,21 @@ export default {
     },
   },
   methods: {
+    gettype(title) {
+      console.log('e', title)
+      this.globalData.subtype1 = title
+      // console.log(this.globalData.subtype)
+    },
     ionChange(e) {
       this.checked = !this.checked;
       this.$emit('change', this.checked);
     }
   },
   mounted() {
+
     this.checked = false;
+    console.log("we subtpe", this.globalData.subtype);
+
   },
 }
 </script>

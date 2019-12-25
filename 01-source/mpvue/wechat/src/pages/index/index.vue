@@ -74,6 +74,8 @@ export default {
   },
 
   created () {
+    this.globalData.userInfo
+    this.globalData.type
     // let app = getApp()
   }
 }

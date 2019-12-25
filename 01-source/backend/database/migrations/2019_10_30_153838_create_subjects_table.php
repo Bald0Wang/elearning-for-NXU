@@ -16,8 +16,11 @@ class CreateSubjectsTable extends Migration
         Schema::create('subjects', function (Blueprint $table) {
             $table->increments('id');
             $table->string('subjectype_id')->nullable();
-            $table->string('ask')->nullable();
-            $table->string('askans')->nullable();
+            $table->text('ask')->nullable();
+            $table->text('askansA')->nullable();
+            $table->text('askansB')->nullable();
+            $table->text('askansC')->nullable();
+            $table->text('askansD')->nullable();
             $table->string('ans')->nullable();
             $table->string('subhardtype')->nullable();
             $table->timestamps();

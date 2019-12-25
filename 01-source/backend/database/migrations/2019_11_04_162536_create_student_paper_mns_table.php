@@ -17,6 +17,8 @@ class CreateStudentPaperMnsTable extends Migration
             $table->increments('id');
             $table->string('student_id')->nullable();
             $table->string('paper_id')->nullable();
+            $table->string('scores')->nullable();
+            $table->string('acc')->nullable();
             $table->timestamps();
         });
     }

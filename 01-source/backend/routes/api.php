@@ -56,12 +56,22 @@ Route::group(['prefix'=>'v1',],function(){
         |-------------------------------------------------------------------------------
         | 与试卷相关的接口
         |-------------------------------------------------------------------------------
-        | URL:            /api/v1/papers/{id}
+        | URL:            /api/v1/papers
         | Controller:     
         | Method:         GET
-        | Description:    获取试卷信息
+        | Description:    获取试卷详细信息
         */
-        Route::get('/{id}','PaperController@paperindex');
+        Route::get('/','PaperController@paperindex');
+         /*
+        |-------------------------------------------------------------------------------
+        | 与试卷相关的接口
+        |-------------------------------------------------------------------------------
+        | URL:            /api/v1/papers/subjects
+        | Controller:     
+        | Method:         GET
+        | Description:    获取试卷的习题内容
+        */
+        Route::get('/subjects','PaperController@papersubjects');
         
     });
     Route::prefix('subjects')->group(function () {
@@ -122,41 +132,41 @@ Route::group(['prefix'=>'v1',],function(){
         | URL:            /api/v1/scores
         | Controller:     ScoreController
         | Method:         GET
-        | Description:    获取测试信息
+        | Description:    上传
         */
-        Route::get('/','ScoreController@findScore');
+        Route::get('/','ScoreController@scoreupload');
         /*
         |-------------------------------------------------------------------------------
         | 获取测试信息
         |-------------------------------------------------------------------------------
-        | URL:            /api/v1/scores/{stuId}/{papId}
+        | URL:            /api/v1/scores/scorelist
         | Controller:     ScoreController
         | Method:         GET
-        | Description:    获取测试信息
+        | Description:    上传
         */
-        Route::get('/{stuId}/{papId}','ScoreController@findScoreBySId');
-        /*
+        Route::get('/scorelist','ScoreController@scorelist');
+         /*
         |-------------------------------------------------------------------------------
         | 获取测试信息
         |-------------------------------------------------------------------------------
-        | URL:            /api/v1/scores/add
-        | Param:          {stuId},{papId},{Score}
+        | URL:            /api/v1/scores/scoreupload
+        | Param:          
         | Controller:     ScoreController
-        | Method:         POST
-        | Description:    获取测试信息
+        | Method:         GET
+        | Description:    上传本次用户的得分情况
         */
-        Route::post('/add','ScoreController@addScore');
-        /*
+        Route::get('/scorelist','ScoreController@scorelist');
+         /*
         |-------------------------------------------------------------------------------
         | 获取测试信息
         |-------------------------------------------------------------------------------
-        | URL:            /api/v1/scores/update
-        | Param:          {stuId},{papId},{Score}
+        | URL:            /api/v1/scores/scoreuserlog
+        | Param:          
         | Controller:     ScoreController
-        | Method:         POST
-        | Description:    获取测试信息
+        | Method:         GET
+        | Description:    上传本次用户的得分情况
         */
-        Route::post('/update','ScoreController@updateScore');
+        Route::get('/scoreuserlog','ScoreController@scoreuserlog');
     });
 
 
@@ -239,19 +249,19 @@ Route::group(['prefix'=>'v1',],function(){
         | Method:         GET
         | Description:    获取学生信息
         */
-        Route::get('/{id}','StudentController@studentindex');
+        Route::get('/','StudentController@students');
     });
     Route::prefix('student_paper_mns')->group(function(){
         /*
         |-------------------------------------------------------------------------------
         | 收藏相关接口
         |-------------------------------------------------------------------------------
-        | URL:            /api/v1/collections
+        | URL:            /api/v1/student_paper_mn_index
         | Controller:     
         | Method:         GET
         | Description:    获取收藏信息
         */
-        Route::get('/{id}','Student_paper_mnController@student_paper_mn_index');
+        Route::get('/','Student_paper_mnController@student_paper_mn_index');
     });
     Route::prefix('student_collections_mns')->group(function(){
         /*
@@ -264,6 +274,18 @@ Route::group(['prefix'=>'v1',],function(){
         | Description:    获取收藏信息
         */
         Route::get('/{id}','Student_collections_mnController@student_collections_mn_index');
+    });
+    Route::prefix('getuser')->group(function(){
+        /*
+        |-------------------------------------------------------------------------------
+        | 收藏相关接口
+        |-------------------------------------------------------------------------------
+        | URL:            /api/v1/getuser
+        | Controller:     
+        | Method:         GET
+        | Description:    获取收藏信息
+        */
+        Route::get('/','userController@getuser');
     });
 
 
