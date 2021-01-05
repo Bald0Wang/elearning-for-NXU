@@ -14,7 +14,7 @@
     "@tensorflow/tfjs": "^0.15.3",
     "@tensorflow/tfjs-vis": "^0.4.2",
     "@tweenjs/tween.js": "^17.2.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "canvas": "^2.3.1",
     "clipboard": "^2.0.0",
     "codemirror": "^5.38.0",
